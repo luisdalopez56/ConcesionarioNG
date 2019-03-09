@@ -1,0 +1,11 @@
+<div *ngIf="car" class="cars">
+  <h2>{{car.car_name | uppercase}} Details</h2>
+  <div><span>Description: </span>{{car.car_desc}}</div>
+  <div><span>Price: </span>{{car.car_price}}</div>
+  <div><span>Update Date: </span>{{car.updated_at | date}}</div>
+  <div>
+    <button routerLink="/car-edit/{{car.id}}">
+      Edit
+    </button>
+  </div>
+</div>

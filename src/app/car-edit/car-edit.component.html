@@ -1,0 +1,15 @@
+<div>
+  <h2>Car Edit</h2>
+  <div>
+    <label>Car Name:
+      <input [(ngModel)]="carData.car_name" placeholder="Car Name"/>
+    </label><br>
+    <label>Car Desc:
+      <input [(ngModel)]="carData.car_desc" placeholder="Car Description"/>
+    </label><br>
+    <label>Car Price:
+      <input [(ngModel)]="carData.car_price" placeholder="Car Price"/>
+    </label><br>
+  </div>
+  <button (click)="updateCar()">Update</button>
+</div>
