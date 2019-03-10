@@ -9,6 +9,7 @@ import { CarComponent } from './car/car.component';
 import { CarAddComponent } from './car-add/car-add.component';
 import { CarDetailComponent } from './car-detail/car-detail.component';
 import { CarEditComponent } from './car-edit/car-edit.component';
+import { AlertModule } from 'ngx-bootstrap';
 const appRoutes: Routes = [
   {
     path: 'cars',
@@ -48,7 +49,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]

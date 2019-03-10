@@ -1,11 +1,15 @@
-<div *ngIf="car" class="cars">
-  <h2>{{car.car_name | uppercase}} Details</h2>
-  <div><span>Description: </span>{{car.car_desc}}</div>
-  <div><span>Price: </span>{{car.car_price}}</div>
-  <div><span>Update Date: </span>{{car.updated_at | date}}</div>
+<div *ngIf="car" class="cars" align = "center">
+  
+  <h2>{{car.car_name | uppercase}} Detalles del coche</h2>
+  
+  <div><span>Marca: </span>{{car.car_trademark}} </div>
+  <div><span>Modelo: </span>{{car.car_model}}</div>
+  <div><span>Potencia(CV): </span>{{car.car_potence}}</div>
+  <div><span>Precio: </span>{{car.car_price}} €</div>
+  
   <div>
-    <button routerLink="/car-edit/{{car.id}}">
-      Edit
+    <button class="btn btn-primary active" routerLink = "/cars">Volver</button><button routerLink="/car-edit/{{car.id}}" class="btn btn-success active">
+      Editar coche
     </button>
   </div>
 </div>

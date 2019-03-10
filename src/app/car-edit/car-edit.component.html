@@ -1,15 +1,18 @@
-<div>
-  <h2>Car Edit</h2>
+<div align = "center">
+  <h2>Modificar coche</h2>
   <div>
-    <label>Car Name:
-      <input [(ngModel)]="carData.car_name" placeholder="Car Name"/>
+    <label>Marca del coche:
+      <input [(ngModel)]="carData.car_trademark" placeholder="Marca del coche"/>
     </label><br>
-    <label>Car Desc:
-      <input [(ngModel)]="carData.car_desc" placeholder="Car Description"/>
+    <label>Modelo del coche:
+      <input [(ngModel)]="carData.car_model" placeholder="Modelo del coche"/>
     </label><br>
-    <label>Car Price:
-      <input [(ngModel)]="carData.car_price" placeholder="Car Price"/>
+    <label>Potencia del coche:
+      <input [(ngModel)]="carData.car_potence" placeholder="Potencia del coche"/>
+    </label><br>
+    <label>Precio del coche:
+      <input [(ngModel)]="carData.car_price" placeholder="Precio del coche"/>
     </label><br>
   </div>
-  <button (click)="updateCar()">Update</button>
+  <button class="btn btn-primary active" routerLink = "/cars">Volver</button><button (click)="updateCar()" class="btn btn-success active" routerLink = "/cars">Actualizar coche</button>
 </div>

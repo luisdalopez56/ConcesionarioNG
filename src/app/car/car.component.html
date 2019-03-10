@@ -1,17 +1,41 @@
-<h2>Cars List</h2>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<div>
-  <button (click)="add()">
-    Add
+<div style="background-color:lightblue" align = "left">
+
+
+
+<table class="table">
+<thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Marca</th>
+        <th scope="col">Modelo</th>
+      <th scope="col">Potencia(CV)</th>
+      <th scope="col">Precio</th>
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor="let c of cars; let i=index;">
+  <th scope="row" ><a routerLink="/cars-details/{{c.id}}">{{c.id}}</a></th>
+    
+    <td routerLink="/cars-details/{{c.id}}">{{c.car_trademark}}</td>
+    <td routerLink="/cars-details/{{c.id}}">{{c.car_model}}</td>
+    <td routerLink="/cars-details/{{c.id}}">{{c.car_potence}}</td>
+    <td routerLink="/cars-details/{{c.id}}">{{c.car_price}}</td>
+    
+    <button type = "button" class="btn btn-danger" title="delete car"
+      (click)="delete(c.id)">Borrar</button>
+ 
+</tr>
+
+</tbody>
+</table>
+
+<div style="background-color: grey" align= "center">
+  <button type = "button" class = "btn btn-primary active " (click)="add()">
+    Añadir coche
   </button>
 </div>
 
-<ul class="cars">
-  <li *ngFor="let c of cars; let i=index;">
-    <a routerLink="/cars-details/{{c.id}}">
-      <span class="badge">{{i+1}}</span> {{c.car_name}}
-    </a>
-    <button class="delete" title="delete car"
-      (click)="delete(c.id)">x</button>
-  </li>
-</ul>
+</div>
+

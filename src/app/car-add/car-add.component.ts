@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CarAddComponent implements OnInit {
 
-  @Input() carData = { car_name: '', car_desc: '', car_price: 0 };
+  @Input() carData = { car_trademark: '', car_model: '', car_potence: '', car_price: null };
 
   constructor(public rest: RestService, private route: ActivatedRoute, private router: Router) { }
 
